@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 13</title>
+</head>
+<body>
+    <script>
+        function suma(x , y){
+            return x + y;
+        }
 
+        function resta(x , y){
+            return x - y;
+        }
+
+        function multiplicacion(x , y){
+            return x * y;
+        }
+
+        function dividir(x , y){
+            return x / y;
+        }
+
+        function calculadora(x, y, op){
+            switch(op) {
+                case "suma":
+                    return suma(x, y);
+                case "resta":
+                    return resta(x, y);
+                case "resmultiplicacionta":
+                    return multiplicacion(x, y);
+                case "dividir":
+                    return dividir(x, y);    
+            }
+        }
+        let num1 = parseFloat(prompt("Ingrese el primer numero"));
+        let num2 = parseFloat(prompt("Ingrese el segundo numero"));
+        let opc = prompt("Imgrese la opcion a realizar (suma, resta, multiplicacion, dividir): ");
+
+        let result = calculadora(num1, num2, opc);
+
+        console.log("El resultado de la operación es: " + result);
+
+    </script>
+</body>
+</html>
